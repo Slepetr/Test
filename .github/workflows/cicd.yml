@@ -19,9 +19,9 @@ jobs:
       - run: npm test
       - uses: appleboy/ssh-action@v0.1.8
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          host: 95.163.241.213
+          username: root
+          password: ~PnvNbbud4sY
           script: |
             cd ../home/app/backend
             git  pull
