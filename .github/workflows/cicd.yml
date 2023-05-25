@@ -25,8 +25,8 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd ../home/app/backend
-            git  pull
-            cd ../home/app
+            cd /home/app/backend
+            git pull
+            cd /home/app
             docker compose down
             docker compose up -d --build
