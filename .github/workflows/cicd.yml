@@ -20,8 +20,9 @@ jobs:
       - uses: appleboy/ssh-action@v0.1.8
         with:
           host: ${{ secrets.HOST }}
-          username: root
-          password: ${{ secrets.PASSWORD }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd ../home/app/backend
             git  pull
